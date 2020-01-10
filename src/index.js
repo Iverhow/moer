@@ -1,11 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {createStore, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk';
 import {counter, addGun, removeGun, addGunAsync} from './index.redux'
 import App from './App'
 
-const store = createStore(counter, applyMiddleware(thunk));
+const reduxDevtools = window.devToolsExtension() ? window.devToolsExtension() : f => f;
+const store = createStore(counter, compose(
+        applyMiddleware(thunk),
+        reduxDevtools
+    )
+);
 // ReactDOM.render(
 //     (
 //         <App store={store}
