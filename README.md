@@ -1,3 +1,6 @@
+本次提交之前的内容是一个简单的react和redux的例子。
+这里主要是为了搭一个架子，后续会以Redux+React Router+Node.js全栈开发 这个教学视频为主学习开发
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
